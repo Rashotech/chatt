@@ -1,0 +1,69 @@
+#chatrooms-container{
+	background-color: var(--light-color);
+}
+
+.chatrooms-title-bar{
+	background-color: lightslategray;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px 20px 9px 20px;
+}
+
+.chatrooms-title-bar span i:hover{
+	font-size: 30px;
+}
+
+.chatrooms-heading{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-bottom: 2px solid var(--light-color)
+}
+
+.chatrooms-heading > h3{
+	background-color: var(--primary-color);
+	color:#fffffe;
+	text-align:center;
+	width:50%;
+	padding:10px;
+}
+
+#chatrooms-page{
+	display:block;
+}
+
+.chatrooms-items{
+	background-color: #fffffe;
+	padding:10px 50px 10px 30px;
+	margin-bottom:10px;
+	box-shadow:1px 1px 1px 1px var(--primary-color);
+	cursor: pointer;
+}
+
+
+.chatrooms-items:hover{
+	background-color: var(--light-color);
+	box-shadow:2px 2px 2px 2px var(--primary-color);
+	border-top:2px solid var(--primary-color);
+}
+
+.chatrooms-items > span{
+	display:inline-block;
+	padding-right:20px;
+}
+
+.chatrooms-items > div{
+	display:inline-block;
+}
+
+#chatrooms-btn{
+	background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+#active-page{
+	display:none;
+}
+
+

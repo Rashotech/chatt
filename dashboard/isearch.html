@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="Description" content="i2talk">
+	<meta name="Keywords" content="Chat App, Chat rooms, Message Scheduling, Location-based User search, chats, iDiary, iSchedule, iReminder, iSearch">
+		
+		
+	<link rel="stylesheet" href="./assets/css/all.css">
+	<link rel="stylesheet" href="./assets/css/styles.css">
+	
+	<title>i2talk | Messages</title>
+</head>
+
+<body>
+	<div class="chat-container">
+		<!-- Side Bar Menu-->
+		<div class="side-bar">
+			<div id="profile"></div>
+			<div id="profile-box"></div>
+			<div id="side-menu-container"></div>
+		</div>
+		<!-- Chat Menu-->
+		<div class="chat-menu">
+			<div class="chat-header">
+				Chats <span class="chat-counter">7</span>
+			</div>
+			<div class="chat-box">
+				<div class="chat-box-img">
+					<img src="../users/mira.jfif">
+				</div>
+				<div class="chat-box-msg">
+					<h4>Mum</h4>
+					<p>Mum, I need more money...</p>
+				</div>
+				<div class="chat-box-stats">
+					<p><span class="chat-counter">1</span></p>
+					<h6>9:23pm</h6>
+				</div>
+			</div>
+				  <div class="chat-box">
+				<div class="chat-box-img">
+					<img src="../users/user3.png">
+				</div>
+				<div class="chat-box-msg">
+					<h4>TIIDELab Cohorts 2</h4>
+					<p>Biggie is calling all of you...</p>
+				</div>
+				<div class="chat-box-stats">
+					<p><span class="chat-counter">2</span></p>
+					<h6>8:30pm</h6>
+				</div>
+			</div>
+				  <div class="chat-box">
+				<div class="chat-box-img">
+					<img src="../users/user4.png">
+				</div>
+				<div class="chat-box-msg">
+					<h4>Jane</h4>
+					<p>When are you going there?</p>
+				</div>
+				<div class="chat-box-stats">
+					<p><span class="chat-counter">1</span></p>
+					<h6>6:01pm</h6>
+				</div>
+			</div>
+				  <div class="chat-box">
+				<div class="chat-box-img">
+					<img src="../users/deven.jpg">
+				</div>
+				<div class="chat-box-msg">
+					<h4>Kate</h4>
+					<p>I was able to get those stuffs.</p>
+				</div>
+				<div class="chat-box-stats">
+					<p><span class="chat-counter">4</span></p>
+					<h6>5:13pm</h6>
+				</div>
+			</div>
+				  <div class="chat-box">
+				<div class="chat-box-img">
+					<img src="../users/user7.jpg">
+				</div>
+				<div class="chat-box-msg">
+					<h4>Mr. Samuel</h4>
+					<p>I'm waiting till next week...</p>
+				</div>
+				<div class="chat-box-stats">
+					<p><span class="chat-counter">2</span></p>
+					<h6>4:20pm</h6>
+				</div>
+			</div>
+				  <div class="chat-box">
+				<div class="chat-box-img">
+					<img src="../users/Kristina.jpg">
+				</div>
+				<div class="chat-box-msg">
+					<h4>Kristi</h4>
+					<p>Mum, I need more money...</p>
+				</div>
+				<div class="chat-box-stats">
+					<p><span class="chat-counter">6</span></p>
+					<h6>3:30pm</h6>
+				</div>
+			</div>
+	  
+		</div>
+  <!-- Message Menu-->
+  <div class="iSearch-page">
+	  <!-- Enter your code here --> 
+	  <div id="iSearch-top">
+		  <p>iSearch</p>
+	  </div>
+	  <p id="iSearch-header">Search for Users by Location</p>
+	  <form id="iSearch-form" action="#">
+		<input id="iSearchInput" type="text" placeholder="Type location here e.g Lagos" required>
+		<button>Search</button> 
+	  </form>
+	  <button id="isearch-geolocation">Search Nearby Users</button>
+	  <div id="iSearch-result"></div>
+</div>
+
+<!-- Add Your JS scripts here -->
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+<script src="../db.js"></script>
+<script type="module" src="./assets/js/features/isearch.js"></script>
+<script src="./assets/js/users/users-db.js"></script>
+<script src="./assets/js/chats/chat-msg-db.js"></script>
+<script src="./assets/js/common/users.js"></script>
+<script src="./assets/js/common/chat.js"></script>
+<script src="./assets/js/users/users-mgt.js"></script>
+<script src="./assets/js/common/dashboard.js"></script>
+</body>
+</html>

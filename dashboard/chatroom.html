@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="Description" content="i2talk">
+	<meta name="Keywords" content="Chat App, Chat rooms, Message Scheduling, Location-based User search, chats, iDiary, iSchedule, iReminder, iSearch">
+		
+		
+	<link rel="stylesheet" href="./assets/css/all.css">
+	<link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/chatroom.css">
+	
+	<title>i2talk | Messages</title>
+</head>
+
+<body>
+<div class="chat-container">
+  <!-- Side Bar Menu-->
+  <div class="side-bar">
+  	<div id="profile"></div>
+  	<div id="profile-box"></div>
+  	<div id="side-menu-container"></div>
+  </div>
+  <!-- Chat Menu-->
+  <div class="chat-menu">
+  	<div class="chat-header">
+  		Chats <span class="chat-counter">7</span>
+  	</div>
+  	<div class="chat-box">
+  		<div class="chat-box-img">
+  			<img src="../users/mira.jfif">
+  		</div>
+  		<div class="chat-box-msg">
+  			<h4>Mum</h4>
+  			<p>Mum, I need more money...</p>
+  		</div>
+  		<div class="chat-box-stats">
+  			<p><span class="chat-counter">1</span></p>
+  			<h6>9:23pm</h6>
+  		</div>
+  	</div>
+  	  	<div class="chat-box">
+  		<div class="chat-box-img">
+  			<img src="../users/user3.png">
+  		</div>
+  		<div class="chat-box-msg">
+  			<h4>TIIDELab Cohorts 2</h4>
+  			<p>Biggie is calling all of you...</p>
+  		</div>
+  		<div class="chat-box-stats">
+  			<p><span class="chat-counter">2</span></p>
+  			<h6>8:30pm</h6>
+  		</div>
+  	</div>
+  	  	<div class="chat-box">
+  		<div class="chat-box-img">
+  			<img src="../users/user4.png">
+  		</div>
+  		<div class="chat-box-msg">
+  			<h4>Jane</h4>
+  			<p>When are you going there?</p>
+  		</div>
+  		<div class="chat-box-stats">
+  			<p><span class="chat-counter">1</span></p>
+  			<h6>6:01pm</h6>
+  		</div>
+  	</div>
+  	  	<div class="chat-box">
+  		<div class="chat-box-img">
+  			<img src="../users/deven.jpg">
+  		</div>
+  		<div class="chat-box-msg">
+  			<h4>Kate</h4>
+  			<p>I was able to get those stuffs.</p>
+  		</div>
+  		<div class="chat-box-stats">
+  			<p><span class="chat-counter">4</span></p>
+  			<h6>5:13pm</h6>
+  		</div>
+  	</div>
+  	  	<div class="chat-box">
+  		<div class="chat-box-img">
+  			<img src="../users/user7.jpg">
+  		</div>
+  		<div class="chat-box-msg">
+  			<h4>Mr. Samuel</h4>
+  			<p>I'm waiting till next week...</p>
+  		</div>
+  		<div class="chat-box-stats">
+  			<p><span class="chat-counter">2</span></p>
+  			<h6>4:20pm</h6>
+  		</div>
+  	</div>
+  	  	<div class="chat-box">
+  		<div class="chat-box-img">
+  			<img src="../users/Kristina.jpg">
+  		</div>
+  		<div class="chat-box-msg">
+  			<h4>Kristi</h4>
+  			<p>Mum, I need more money...</p>
+  		</div>
+  		<div class="chat-box-stats">
+  			<p><span class="chat-counter">6</span></p>
+  			<h6>3:30pm</h6>
+  		</div>
+  	</div>
+
+  </div>
+  
+  <div id ="chatrooms-container">
+
+    <nav class="chatrooms-title-bar">
+      <h2 id="chatrooms-feature-title">Chat Rooms</h2>
+
+      <span style="font-size:25px; color:#110E4C;">
+          <i class="fas fa-cog"></i>
+      </span>
+    </nav>
+
+      <div class="chatrooms-heading">
+        <h3 id="chatrooms-btn" onclick="showChatroomsPage()">Chat Rooms</h3>
+        <h3 id="active-btn" onclick="showActivePage()">Active (3)</h3>
+      </div>
+
+      <div id="chatrooms-page">
+
+        <div class="chatrooms-items">
+          <span style="font-size:35px; color:#110E4C;">
+            <i class="fas fa-hashtag"></i>
+          </span>
+          <div>
+            <h3>Trending</h3>
+            <p>Discussions about the latest, new and trending topics e.g #EndSars</p>
+          </div>
+        </div>
+
+        <div class="chatrooms-items">
+          <span style="font-size:35px; color:#110E4C;">
+            <i class="fas fa-praying-hands"></i>
+          </span>
+          <div>
+            <h3>Faith</h3>
+            <p>Discussions on issues pertaining to our faith e.g christianity, islam etc.</p>
+          </div>
+        </div>
+
+        <div class="chatrooms-items">
+          <span style="font-size:35px; color:#110E4C;">
+            <i class="fas fa-futbol"></i>
+          </span>
+          <div>
+            <h3>Sports</h3>
+            <p>Discussions on sports issues e.g football, basketball, olympics etc.</p>
+          </div>
+        </div>
+
+        <div class="chatrooms-items">
+          <span style="font-size:35px; color:#110E4C;">
+            <i class="fas fa-icons"></i>
+          </span>
+          <div>
+            <h3>Entertainment</h3>
+            <p>Discussions on entertainment issues e.g movies, music etc.</p>
+          </div>
+        </div>
+
+        <div class="chatrooms-items">
+          <span style="font-size:35px; color:#110E4C;">
+            <i class="fas fa-tshirt"></i>
+          </span>
+          <div>
+            <h3>Fashion</h3>
+            <p>Discussions on the latest fashion trends e.g alte fashion</p>
+          </div>
+        </div>
+
+        <div class="chatrooms-items">
+          <span style="font-size:35px; color:#110E4C;">
+            <i class="fas fa-user-graduate"></i>
+          </span>
+          <div>
+            <h3>Education</h3>
+            <p>Discussions on the latest school gist and scholarship opportunities</p>
+          </div>
+        </div>
+
+        <div class="chatrooms-items">
+          <span style="font-size:35px; color:#110E4C;">
+            <i class="fas fa-laptop-code"></i>
+          </span>
+          <div>
+            <h3>Technology</h3>
+            <p>Discussions on the latest technologies</p>
+          </div>
+        </div>
+        
+        <div class="chatrooms-items">
+          <span style="font-size:35px; color:#110E4C;">
+            <i class="fas fa-hand-holding-heart"></i>
+          </span>
+          <div>
+            <h3>Advice</h3>
+            <p>Discussions on matters of the heart and heart-to-heart conversations</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="active-page">
+
+        <div class="chatrooms-items">
+          <span style="font-size:35px; color:#110E4C;">
+            <i class="fas fa-hashtag"></i>
+          </span>
+          <div>
+            <h3>Trending</h3>
+            <p>Discussions about the latest, new and trending topics e.g #EndSars</p>
+          </div>
+        </div>
+
+        <div class="chatrooms-items">
+          <span style="font-size:35px; color:#110E4C;">
+            <i class="fas fa-tshirt"></i>
+          </span>
+          <div>
+            <h3>Fashion</h3>
+            <p>Discussions on the latest fashion trends e.g alte fashion</p>
+          </div>
+        </div>
+
+        <div class="chatrooms-items">
+          <span style="font-size:35px; color:#110E4C;">
+            <i class="fas fa-hand-holding-heart"></i>
+          </span>
+          <div>
+            <h3>Advice</h3>
+            <p>Discussions on matters of the heart and heart-to-heart conversations</p>
+          </div>
+        </div>
+          
+      </div>
+
+  </div>
+
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+<script src="../db.js"></script>
+<script src="./assets/js/users/users-db.js"></script>
+<script src="./assets/js/chats/chat-msg-db.js"></script>
+<script src="./assets/js/common/users.js"></script>
+<script src="./assets/js/common/chat.js"></script>
+<script src="./assets/js/users/users-mgt.js"></script>
+<script src="./assets/js/common/dashboard.js"></script>
+
+<script type="text/javascript">
+  
+  function showActivePage(){
+    document.getElementById("chatrooms-page").style.display="none"
+    document.getElementById("active-page").style.display="block"
+    document.getElementById("chatrooms-btn").style.backgroundColor="var(--primary-color)"
+    document.getElementById("chatrooms-btn").style.color="#fffffe"
+    document.getElementById("active-btn").style.backgroundColor="var(--secondary-color)"
+    document.getElementById("active-btn").style.color="var(--primary-color)"
+  }
+
+  function showChatroomsPage(){
+    document.getElementById("chatrooms-page").style.display="block"
+    document.getElementById("active-page").style.display="none"
+    document.getElementById("chatrooms-btn").style.backgroundColor="var(--secondary-color)"
+    document.getElementById("chatrooms-btn").style.color="var(--primary-color)"
+    document.getElementById("active-btn").style.backgroundColor="var(--primary-color)"
+    document.getElementById("active-btn").style.color="#fffffe"
+  }
+
+
+</script>
+
+</body>
+</html>
+

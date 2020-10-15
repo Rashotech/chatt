@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="Description" content="i2talk">
+	<meta name="Keywords" content="Chat App, Chat rooms, Message Scheduling, Location-based User search, chats, iDiary, iSchedule, iReminder, iSearch">
+		
+		
+	<link rel="stylesheet" href="./assets/css/all.css">
+	<link rel="stylesheet" href="./assets/css/styles.css">
+	<link rel="stylesheet" href="./assets/css/iDiary.css">
+	
+	<title>i2talk | Messages</title>
+</head>
+
+<body>
+<div class="chat-container">
+  <!-- Side Bar Menu-->
+  <div class="side-bar">
+  	<div id="profile"></div>
+  	<div id="profile-box"></div>
+  	<div id="side-menu-container"></div>
+  </div>
+  <!-- Chat Menu-->
+  <div class="chat-menu">
+  	<div class="chat-header">
+  		Chats <span class="chat-counter">7</span>
+  	</div>
+  	<div class="chat-box">
+  		<div class="chat-box-img">
+  			<img src="../users/mira.jfif">
+  		</div>
+  		<div class="chat-box-msg">
+  			<h4>Mum</h4>
+  			<p>Mum, I need more money...</p>
+  		</div>
+  		<div class="chat-box-stats">
+  			<p><span class="chat-counter">1</span></p>
+  			<h6>9:23pm</h6>
+  		</div>
+  	</div>
+  	  	<div class="chat-box">
+  		<div class="chat-box-img">
+  			<img src="../users/user3.png">
+  		</div>
+  		<div class="chat-box-msg">
+  			<h4>TIIDELab Cohorts 2</h4>
+  			<p>Biggie is calling all of you...</p>
+  		</div>
+  		<div class="chat-box-stats">
+  			<p><span class="chat-counter">2</span></p>
+  			<h6>8:30pm</h6>
+  		</div>
+  	</div>
+  	  	<div class="chat-box">
+  		<div class="chat-box-img">
+  			<img src="../users/user4.png">
+  		</div>
+  		<div class="chat-box-msg">
+  			<h4>Jane</h4>
+  			<p>When are you going there?</p>
+  		</div>
+  		<div class="chat-box-stats">
+  			<p><span class="chat-counter">1</span></p>
+  			<h6>6:01pm</h6>
+  		</div>
+  	</div>
+  	  	<div class="chat-box">
+  		<div class="chat-box-img">
+  			<img src="../users/deven.jpg">
+  		</div>
+  		<div class="chat-box-msg">
+  			<h4>Kate</h4>
+  			<p>I was able to get those stuffs.</p>
+  		</div>
+  		<div class="chat-box-stats">
+  			<p><span class="chat-counter">4</span></p>
+  			<h6>5:13pm</h6>
+  		</div>
+  	</div>
+  	  	<div class="chat-box">
+  		<div class="chat-box-img">
+  			<img src="../users/user7.jpg">
+  		</div>
+  		<div class="chat-box-msg">
+  			<h4>Mr. Samuel</h4>
+  			<p>I'm waiting till next week...</p>
+  		</div>
+  		<div class="chat-box-stats">
+  			<p><span class="chat-counter">2</span></p>
+  			<h6>4:20pm</h6>
+  		</div>
+  	</div>
+  	  	<div class="chat-box">
+  		<div class="chat-box-img">
+  			<img src="../users/Kristina.jpg">
+  		</div>
+  		<div class="chat-box-msg">
+  			<h4>Kristi</h4>
+  			<p>Mum, I need more money...</p>
+  		</div>
+  		<div class="chat-box-stats">
+  			<p><span class="chat-counter">6</span></p>
+  			<h6>3:30pm</h6>
+  		</div>
+  	</div>
+
+  </div>
+  <!-- Message Menu-->
+  <div id="iDiary-container">
+
+    <nav class="title-bar">
+
+        <h2 id="featureTitle">iDiary</h2>
+        
+        <span style="font-size:25px; color:#110E4C;">
+            <i class="fas fa-cog"></i>
+        </span>
+      
+    </nav>
+      
+      <!--SEARCH MESSAGES-->
+      <div id="top">
+        <input type="text" id="searchInput" placeholder="Search saved notes" />
+        <button onclick="displayLoader()" id="search-btn"><img src="../assets/img/ajax-loader.gif" width="15px" id="idiary-loader">Search</button>
+        <button id="addNew-btn" onclick="addNewMessage()">+ Add New Note</button>
+      </div>
+
+
+      <!--DISPLAY THE NUMBER OF RECORDS FOUND AFTER SEARCH-->
+      <h3 id="records"></h3>
+
+
+      <!--BUTTON TO GO BACK TO ALL MESSAGES DISPLAY AFTER SEARCH-->
+      <button id="back-btn" onclick="displayBackLoader()"><img src="../assets/img/ajax-loader.gif" width="15px" id="idiary-back-loader">Back to notes</button>
+
+
+      <!--FORM TO ADD NEW MESSAGE-->
+      <div id="addNew">
+        <textarea type="text" placeholder="Enter your message" name="message" id="messageInput" rows="3" cols="60"></textarea>
+        <button id="submitNewMessage-btn" onclick="displayAddedMessage()">Add</button>
+        <button id="cancel" onclick="back()">Cancel</button>
+      </div>
+
+
+      <!--FORM TO EDIT MESSAGE-->
+      <div id="editNew">
+        <input type="hidden" id="messageId">
+        <textarea type="text" placeholder="" name="message" id="editMessageInput" rows="3" cols="60"></textarea>
+        <button id="editedMessage-btn" onclick="displayEditedMessage()">Add Changes</button>
+        <button id="cancel" onclick="back()">Cancel</button>
+      </div>
+
+      <h3 id="top-heading">Saved Notes</h3>
+
+
+      <!--ALL MESSAGES ARE DISPLAYED HERE-->
+      <div id="messages">
+      
+      </div>	
+</div>
+</div>	  
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+<script src="../db.js"></script>
+<script src="./assets/js/users/users-db.js"></script>
+<script src="./assets/js/chats/chat-msg-db.js"></script>
+<script src="./assets/js/common/users.js"></script>
+<script src="./assets/js/common/chat.js"></script>
+<script src="./assets/js/users/users-mgt.js"></script>
+<script src="./assets/js/common/dashboard.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+  
+	allMessages=JSON.parse(localStorage.getItem("iDiary"))
+	
+	
+		 if(allMessages==null||allMessages==undefined){
+				allMessages=[]
+			 }
+	
+			/* allMessages=[
+				"Please find the link to the job posted earlier and apply https://bit.ly/3mHNiFD Its very important. Thanks !",
+	
+				"The date for the job interview is 28th of December 2020. Do not be late and endeavour to dress appropraitely"
+			 
+			]*/
+		//DISPLAY LOADER BESIDE THE SEARCH BUTTON BEFORE RESULTS SHOW UP
+		function displayLoader(){
+			document.getElementById("idiary-loader").style.display="inline-block"
+			setTimeout(searchIncludes,1000)
+		}
+
+		//DISPLAY LOADER BESIDE THE BACK BUTTON BEFORE ALL SAVED NOTES SHOW UP
+		function displayBackLoader(){
+			document.getElementById("idiary-back-loader").style.display="inline-block"
+			setTimeout(back,1000)
+		}
+
+		//TO SEARCH FOR A SAVED NOTE
+		function searchIncludes(){
+			
+		  input= document.getElementById("searchInput").value
+	
+		  input=input.toLowerCase()//CONVERTS THE SEARCH INPUT TO LOWER CASE
+	
+		  //FILTERS FOR MESSAGES THAT INCLUDE THE SEARCH PARAMETER
+		  allMessages= allMessages.filter(x=>x.message.toLowerCase().includes(input))
+	
+		  document.getElementById("records").style.display="block"
+		  document.getElementById("back-btn").style.display="block"
+		  document.getElementById("top").style.display="none"
+		  document.getElementById("top-heading").style.display="none"
+	
+		  if(allMessages==null||allMessages==undefined){
+			document.getElementById("records").innerHTML=`<b> No notes found</b>`
+		  }
+		  
+		  else{
+			displaySearchedMessages()
+			
+			if(allMessages.length==1){
+			  document.getElementById("records").innerHTML=`<b> 1 note found</b>`
+			}
+			else{
+			  document.getElementById("records").innerHTML=`<b>${allMessages.length} notes found</b>`
+			}
+		  }
+		  
+		}
+	
+	
+		//TO GO BACK TO THE MAIN DISPLAY OF ALL SAVED MESSAGES
+		function back(){
+		  location.reload()
+		}
+	
+		//TO SHOW THE ADD NEW MESSAGE FORM
+		function addNewMessage(){
+		  document.getElementById("addNew").style.display="inline-block"
+		  document.getElementById("top").style.display="none"
+		  document.getElementById("messageInput").value=""
+		}
+
+		//TO DISPLAY ALL SAVED NOTES PLUS NEWLY ADDED NOTE
+		function displayAddedMessage(){
+		  document.getElementById("top").style.display="block"
+		  document.getElementById("addNew").style.display="none"
+		  todaysDate= new Date().toLocaleString()//TO GET THE TIME STAMP FOR ALL MESSAGES
+	
+		  newMessage={
+			time : todaysDate,
+			message: document.getElementById("messageInput").value
+		  }
+	
+		  allMessages.unshift(newMessage)
+	
+		  allMessages[0]= newMessage
+		  localStorage.setItem("iDiary",JSON.stringify(allMessages))
+		  //alert(JSON.stringify(allMessages))
+		  displayMessages()
+		  //document.getElementById("messageContainer").style.backgroundColor="lightblue"
+	
+		}
+	
+		//FUNCTION TO DISPLAY EDIT MESSAGE FORM
+		function showEditMessageForm(x){
+		  document.getElementById("editNew").style.display="block"
+		  document.getElementById("top").style.display="none"
+	
+		  //SHOWS USER DETAILS AS VALUES TO BE EDITED
+		  document.getElementById("messageId").value= x
+		  document.getElementById("editMessageInput").value= allMessages[x].message 
+		}
+	
+	
+		//FUNCTION FOR EDITING USERS
+		function displayEditedMessage(){
+		  document.getElementById("top").style.display="block"
+		  document.getElementById("editNew").style.display="none"
+	
+		  todaysDate= new Date().toLocaleString()//TO GET THE TIME STAMP FOR ALL MESSAGES
+		  messageId= document.getElementById("messageId").value
+	
+		  editedMessage= {
+		   time: "Last edited on " + todaysDate, 
+		   message: document.getElementById("editMessageInput").value
+		  }
+					
+		  allMessages[messageId]= editedMessage
+		  localStorage.setItem("iDiary", JSON.stringify(allMessages))
+
+		  swal("GREAT!", "You have succesfully edited this note!", "success");
+					
+		  displayMessages()
+		}
+	
+	
+		//FUNCTION FOR DELETING USERS
+		function deleteMessages(x){
+			swal({
+				  title: "Are you sure?",
+				  text: "Once deleted, you will not be able to recover this note!",
+				  icon: "warning",
+				  buttons: true,
+				  dangerMode: true,
+				})
+
+				.then((willDelete) => {
+				  if (willDelete) {
+
+				    swal(" This note has been deleted!", {
+				      icon: "success",
+				    });
+				    allMessages.splice(x,1)
+	
+			 		localStorage.setItem("iDiary", JSON.stringify(allMessages))
+
+			 		displayMessages()
+				  } 
+
+				  else {
+				    swal("This note is safe!");
+				    displayMessages()
+				  }
+				});
+
+			/* validate=confirm("Do you want to delete this message?")
+	
+			if(validate==true){
+			  allMessages.splice(x,1)
+	
+			  localStorage.setItem("iDiary", JSON.stringify(allMessages))
+	
+			  displayMessages()
+			}
+	
+			else{
+			  displayMessages()
+			}*/
+		  
+		}
+	
+	
+		 function displaySearchedMessages(){
+		  
+		  y=allMessages.length
+		  content=""
+		  
+		  for(x=0; x<y; x++){
+			content+=`<div id="messageContainer">
+				   <sup>${allMessages[x].time}</sup><br>
+				   <p> ${allMessages[x].message}</p><br>
+				  </div>`
+		  }
+	
+		  document.getElementById("messages").innerHTML= content
+		}
+	
+	
+	
+		function displayMessages(){
+		  
+		  y=allMessages.length
+		  content=""
+		  
+		  for(x=0; x<y; x++){
+			content+=`
+				<div id="messageContainer">
+				   <sup>${allMessages[x].time}</sup><br>
+				   <p> ${allMessages[x].message}</p><br>
+				   <div id="buttons">
+					<span style="font-size:20px; color:#110E4C;" id="edit-icon" onclick="showEditMessageForm(${x})" align="right">
+					  <i class="far fa-edit"></i>
+					</span>
+	
+					<span style="font-size:20px; color:#110E4C;" id="delete-icon" onclick="deleteMessages(${x})">
+					 <i class="far fa-trash-alt"></i>
+					</span>
+				  </div>
+				  
+			  </div>`
+		  }
+		  document.getElementById("messages").innerHTML= content
+		}
+	
+		displayMessages()
+	
+	</script> 
+
+
+</body>
+</html>

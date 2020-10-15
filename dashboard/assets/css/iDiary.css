@@ -1,0 +1,199 @@
+
+	#iDiary-container{
+		background-color:var(--light-color);
+		width: 100%;
+	}
+
+	.title-bar{
+		background-color: lightslategrey;
+		display:flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 10px 20px 9px 20px;
+		margin-bottom: 30px;
+	}
+
+	.title-bar > span >i:hover{
+		font-size: 30px;
+	}
+
+	#addNew{
+		display:none;
+		margin-left:90px;
+		margin-top: 30px;
+	}
+
+	#cancel, #addNew-btn{
+		margin-left:100px;
+		background-color:var(--primary-color);
+		color:white;
+		padding:10px;
+		border:2px solid var(--primary-color);
+		border-radius: 10px;
+	}
+
+	#submitNewMessage-btn, #editedMessage-btn{
+		margin-left:40px;
+		padding:10px 20px 10px 20px;
+	}
+
+	#cancel{
+		margin-left: 0px;
+	}
+
+	#search-btn, #submitNewMessage-btn, #editedMessage-btn{
+		background-color: var(--primary-color);
+		color:white;
+		padding:10px;
+		border:2px solid var(--primary-color);
+		border-radius:10px;
+	}
+
+	button{
+		outline-style: none;
+	}
+
+	#search-btn:hover, #submitNewMessage-btn:hover, #editedMessage-btn:hover,#cancel:hover, #addNew-btn:hover, #back-btn:hover{
+		background-color: var(--secondary-color);
+		box-shadow: 2px 2px 2px 2px var(--primary-color);
+		color:var(--primary-color);
+	}
+
+	#messages{
+		width:100%;
+	}
+
+	#messageContainer{
+		width:80%;
+		border-radius: 20px;
+		border-top-right-radius: 0px;
+		border-top-left-radius: 0px;
+		display:block;
+		margin:20px auto 20px auto;
+		background-color: #fffffe;
+		box-shadow:1px 1px 1px 1px var(--primary-color);
+		word-break: break-word;
+	}
+
+	#messageContainer > sup{
+		display:block;
+		padding: 5px;
+		background-color:var(--primary-color);
+		color:#fffffe;
+		margin: 0px;
+	}
+
+	#messageContainer > p{
+		padding:0px 10px 0px 10px;
+	}
+
+	#buttons{
+		margin-left: 85%;
+		padding-bottom: 10px;
+	}
+
+	#buttons > span  > i{
+		margin-right: 10px;
+	}
+
+	#buttons > span > i:hover{
+		font-size:25px;
+	}
+
+	#top{
+		display:block;
+		margin-top:20px;
+		margin-left:90px;
+	}
+
+	#records{
+		background-color:var(--primary-color);
+		color: #fffffe;
+		text-align:center;
+		width:70%;
+		padding:10px;
+		display:none;
+		margin:20px auto 20px auto;
+		border-radius:10px;
+	}
+
+	#top-heading{
+		display:block;
+		color: var(--primary-color);
+		text-align:center;
+		margin-top: 20px;
+	}
+
+ 	#back-btn{
+		background-color:var(--primary-color);
+		color:white;
+		border-radius: 10px;
+		padding: 10px;
+		border: 2px solid  var(--primary-color);
+		display: none;
+		margin: 20px auto 20px auto;
+	}
+
+
+	#editNew{
+		display:none;
+		margin-left:90px;
+		margin-top: 30px;
+	}
+
+	input{
+		border-radius: 10px;
+		padding:10px;
+		outline-style: none;
+		width:40%;
+		background-color: #fffffe;
+		border:2px solid #fffffe;
+	}
+
+	#messageInput, #editMessageInput{
+		border-radius: 10px;
+		outline-style: none;
+		background-color: #fffffe;
+		border:2px solid #fffffe;
+	}
+
+
+	.swal-button.swal-button--confirm{
+		background-color: var(--primary-color);
+	}
+
+	.swal-button.swal-button--confirm:hover{
+		background-color: var(--secondary-color);
+		box-shadow: 2px 2px 2px 2px var(--secondary-color)
+	}
+
+	#idiary-loader, #idiary-back-loader{
+		display:none;
+		margin-right: 10px;
+	}
+
+	@media screen and (max-width:500px){
+		#top{
+			margin-left:40px;
+		}
+
+		#searchInput{
+			width:60%;
+			margin-right: 20px;
+		}
+
+		#addNew-btn{
+			display:block;
+			margin:10px auto 0px auto;
+		}
+
+		#buttons{
+			margin-left: 70%;
+		}
+
+		#addNew{
+		margin-left: 10px;
+		}
+
+	}
+
