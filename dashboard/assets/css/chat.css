@@ -16,7 +16,7 @@
 #messageForm {
     background-color: green;
     position: absolute;
-    bottom: -121px;
+    bottom: 50px;
     padding: 15px;
     width: 26.79%;
 }
@@ -66,6 +66,24 @@ i{
     color: #ffffff;
 }
 
-/* #messages {
-    position : relative;
-} */
+@media all and (max-width: 450px) {
+    .chat-menu {
+		display: none;
+	}
+	#iSearch-top {
+		width: 54vw;
+		width: 100%;	
+	}
+	#iSearch-header {
+		text-align: center;
+		margin-left: 0px;
+	}
+	.side-bar {
+		display: none;
+	}
+	.chat-container {
+		grid-template-columns: 0;
+		background : #E5E5E5;
+		min-height : 100vh;
+	}
+}
