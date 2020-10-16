@@ -1,13 +1,16 @@
 .chat {
-    width: 360px;
-    height: 500px;
-    background-color: red;
+    width: 100%;
+    height: 90vh;
+    /* background-color: red; */
     font-family: sans-serif;
 }
 
+nav {
+    display: none;
+}
 .chat-window {
     background-image: url(../../../assets/img/img.jpg);
-    height: 390px;
+    height: 100%;
     width: 100%;
     overflow-y: auto;
     padding-bottom: 30px;
@@ -15,10 +18,11 @@
 
 #messageForm {
     background-color: green;
-    position: absolute;
-    bottom: 50px;
-    padding: 15px;
-    width: 26.79%;
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    width: 800px;
+    height: 10% ;
 }
 #msg-input {
     padding: 7px;
@@ -85,5 +89,16 @@ i{
 		grid-template-columns: 0;
 		background : #E5E5E5;
 		min-height : 100vh;
-	}
+    }
+    #messageForm {
+        background-color: green;
+        position: fixed;
+        bottom: 0;
+        padding: 10px;
+        width: 100%;
+        height: 10% ;
+    }
+    nav {
+        display: block;
+    }
 }

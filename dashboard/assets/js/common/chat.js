@@ -42,12 +42,13 @@ const msgRef = db.collection("messages");
 function displayChat() {
     
 }
-var id = uuidv4()
+
 setTimeout(function(){ document.getElementById("messages").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})}, 1000);
 
 
 messageForm.addEventListener("submit", event => {
     // if (!text.trim()) return;
+    var id = uuidv4()
     var text = msgInput.value;
     const msg = {
         id: id,

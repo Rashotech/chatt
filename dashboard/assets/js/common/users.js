@@ -281,12 +281,12 @@ if (loggedIn == false) {
     tempUsers.latlong=latlong;
     // alert(JSON.stringify(tempUsers))
     db.collection("users").add(tempUsers).then((ref) => {
-    console.log("Added User with ID:", ref.id)
-    localStorage.removeItem("tempUsers");
+      // console.log("Added User with ID:", ref.id)
     })
   }
-  setTimeout(function(){ window.location.replace("dashboard/index.html") }, 1000);
-  
+ 
+  setTimeout(function(){ window.location.assign("dashboard/index.html") }, 1500);
+  localStorage.removeItem("tempUsers");
   event.preventDefault();
 }
 

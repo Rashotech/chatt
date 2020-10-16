@@ -7,7 +7,7 @@ else {
 }
 // window.location.reload();
 //GET USER RECORD
-var nnUsers = JSON.parse(localStorage.getItem("iUsers"));
+nnUsers = JSON.parse(localStorage.getItem("iUsers"));
 function getUserByUser(uname) {
     userIndexer = nnUsers.findIndex(x=>x.userName.toLowerCase() == uname.toLowerCase());
     usersRecordz = nnUsers[userIndexer];
