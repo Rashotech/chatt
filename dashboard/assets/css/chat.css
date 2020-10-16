@@ -13,11 +13,11 @@ nav {
     height: 100%;
     width: 100%;
     overflow-y: auto;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 #messageForm {
-    background-color: green;
+    background-color: #110E4C;
     position: fixed;
     bottom: 0;
     padding: 10px;
@@ -91,10 +91,7 @@ i{
 		min-height : 100vh;
     }
     #messageForm {
-        background-color: green;
-        position: fixed;
-        bottom: 0;
-        padding: 10px;
+        /* padding: 10px; */
         width: 100%;
         height: 10% ;
     }
