@@ -10,7 +10,7 @@ nav {
 }
 .chat-window {
     background-image: url(../../../assets/img/img.jpg);
-    height: 100%;
+    height: 90%;
     width: 100%;
     overflow-y: auto;
     padding-bottom: 40px;
@@ -91,11 +91,15 @@ i{
 		min-height : 100vh;
     }
     #messageForm {
-        /* padding: 10px; */
+        padding: 25px;
         width: 100%;
         height: 10% ;
     }
     nav {
         display: block;
+    }
+    .chat-window {
+        height: 100%;
+        padding-bottom: 40px;
     }
 }

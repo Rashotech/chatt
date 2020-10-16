@@ -43,15 +43,13 @@ function displayChat() {
     
 }
 
-setTimeout(function(){ document.getElementById("messages").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})}, 1000);
+
 
 
 messageForm.addEventListener("submit", event => {
     // if (!text.trim()) return;
-    var id = uuidv4()
     var text = msgInput.value;
     const msg = {
-        id: id,
         name : loggedUser,
         text : text,
         timestamp : firebase.firestore.FieldValue.serverTimestamp()
@@ -64,16 +62,32 @@ event.preventDefault();
 });
 
 msgRef.onSnapshot(snapshot => {
+    if (snapshot.docChanges()[0] === undefined) {
+        const msg = `
+            <li id="no-msg">
+            <span id="chat-new">
+                No Previous Messages..Send one now!
+            </span>
+            </li>
+`
+messageScreen.innerHTML += msg;
+setTimeout(function(){ 
+var elem = document.querySelector('#no-msg');
+elem.parentNode.removeChild(elem);
+}, 3000);
+
+    } else {
     shown = snapshot.docChanges()[0].doc.data()
+    console.log(shown)
+    const {name, text} = shown;
     if (shown) {
         if (!shown.createdAt && snapshot.metadata.hasPendingWrites) {
             // we don't have a value for createdAt yet
-            const ts = firebase.firestore.Timestamp.now()
-            console.log(`timestamp: ${ts} (estimated)`)
+            // const ts = firebase.firestore.Timestamp.now()
+            // console.log(`timestamp: ${ts} (estimated)`)
         }
         else {
             // now we have the final timestamp value
-            const { id , name, text} = shown;
     const msg = `
     <li class="${name === loggedUser ? "my" : "msg"}">
     <span id="chat-new">
@@ -82,9 +96,9 @@ msgRef.onSnapshot(snapshot => {
 </li>
     `
     messageScreen.innerHTML += msg;
-    setTimeout(function(){ document.getElementById("messages").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})}, 50);
-            console.log(`timestamp: ${shown.createdAt} (actual)`)
-        }
+   document.getElementById("messages").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})
+            // console.log(`timestamp: ${shown.createdAt} (actual)`)
+        }}
     }
     // messages.forEach(function(doc) {
     
@@ -93,9 +107,9 @@ msgRef.onSnapshot(snapshot => {
 
 
 function showChat() {
-    msgRef.orderBy("timestamp", "asc").get().then((querySnapshot) => {
+    msgRef.orderBy("timestamp", "asc").get().then((querySnapshot) => {                                                                                                                                                                                                                                                                                                                                              
         querySnapshot.forEach((doc) => {
-            const { id , name, text} = doc.data();
+            const {name, text} = doc.data();
     const msg = `
     <li class="${name === loggedUser ? "my" : "msg"}">
     <span id="chat-new">
@@ -106,5 +120,6 @@ function showChat() {
     messageScreen.innerHTML += msg;
         });
     });
+    setTimeout(function(){ document.getElementById("messages").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})}, 1000);
 }
 showChat();
