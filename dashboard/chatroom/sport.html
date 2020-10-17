@@ -8,13 +8,12 @@
 	<meta name="Keywords" content="Chat App, Chat rooms, Message Scheduling, Location-based User search, chats, iDiary, iSchedule, iReminder, iSearch">
 		
 		
-	<link rel="stylesheet" href="./assets/css/all.css">
-	<link rel="stylesheet" href="./assets/css/styles.css">
-	<link rel="stylesheet" href="./assets/css/chat.css">
+	<link rel="stylesheet" href="../assets/css/all.css">
+	<link rel="stylesheet" href="../assets/css/styles.css">
+	<link rel="stylesheet" href="../assets/css/chat.css">
 	
 	<title>i2talk | Messages</title>
 </head>
-
 <body>
 <div class="chat-container">
   <!-- Side Bar Menu-->
@@ -30,7 +29,7 @@
   	</div>
   	<div class="chat-box">
   		<div class="chat-box-img">
-  			<img src="../users/mira.jfif">
+  			<img src="../../users/mira.jfif">
   		</div>
   		<div class="chat-box-msg">
   			<h4>Mum</h4>
@@ -43,7 +42,7 @@
   	</div>
   	  	<div class="chat-box">
   		<div class="chat-box-img">
-  			<img src="../users/user3.png">
+  			<img src="../../users/user3.png">
   		</div>
   		<div class="chat-box-msg">
   			<h4>TIIDELab Cohorts 2</h4>
@@ -56,7 +55,7 @@
   	</div>
   	  	<div class="chat-box">
   		<div class="chat-box-img">
-  			<img src="../users/user4.png">
+  			<img src="../../users/user4.png">
   		</div>
   		<div class="chat-box-msg">
   			<h4>Jane</h4>
@@ -69,7 +68,7 @@
   	</div>
   	  	<div class="chat-box">
   		<div class="chat-box-img">
-  			<img src="../users/deven.jpg">
+  			<img src="../../users/deven.jpg">
   		</div>
   		<div class="chat-box-msg">
   			<h4>Kate</h4>
@@ -82,7 +81,7 @@
   	</div>
   	  	<div class="chat-box">
   		<div class="chat-box-img">
-  			<img src="../users/user7.jpg">
+  			<img src="../../users/user7.jpg">
   		</div>
   		<div class="chat-box-msg">
   			<h4>Mr. Samuel</h4>
@@ -95,7 +94,7 @@
   	</div>
   	  	<div class="chat-box">
   		<div class="chat-box-img">
-  			<img src="../users/Kristina.jpg">
+  			<img src="../../users/Kristina.jpg">
   		</div>
   		<div class="chat-box-msg">
   			<h4>Kristi</h4>
@@ -106,31 +105,34 @@
   			<h6>3:30pm</h6>
   		</div>
   	</div>
-
   </div>
   <!-- Message Menu-->
 	<!-- <img src="../assets/connect.jpg">
   	<h1>Welcome to i2talk</h1>
 	  <p>No conversation in sync. Please, search for users and start chat.</p> -->
 		<!-- Navigation Bar -->
-		<div class="chat-message">
-			<div id="main-container">
-		  <img src="../assets/connect.jpg">
-			<h1>Welcome to i2talk</h1>
-			<p>No conversation in sync. Please, search for users and start chat.</p>
-		</div> 	  
-	  </div> 
-	  </div>  
+	  <div class="chat">
+		<div class="chat-header">Sports Group Chat</div>
+		<div class="chat-window" id="window">
+		<ul id ="messages">
+		</ul>
+		<form id="messageForm">
+			<input placeholder="Type a Message .." type="text" id="msg-input" required>
+			<button id="msg-btn">Send</button>
+		</form>
+		</div>
+	</div>
+  </div> 	  
 <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
-<script src="../db.js"></script>
+<script src="../../db.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
-<script src="./assets/js/users/users-db.js"></script>
-<script src="./assets/js/chats/chat-msg-db.js"></script>
-<script src="./assets/js/common/users.js"></script>
-<script src="./assets/js/common/chat.js"></script>
-<script src="./assets/js/users/users-mgt.js"></script>
-<script src="./assets/js/common/dashboard.js"></script>
+<script src="../assets/js/users/users-db.js"></script>
+<script src="../assets/js/chats/chat-msg-db.js"></script>
+<script src="../assets/js/common/users.js"></script>
+<script src="../assets/js/common/chat.js"></script>
+<script src="../assets/js/users/users-mgt.js"></script>
+<script src="../chatroom/chatroom-dash.js"></script>
 <script>
 	// setTimeout(function(){ window.location.reload();  }, 1000);
 </script>

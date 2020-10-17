@@ -108,7 +108,7 @@
   	</div>
 
   </div>
-  
+
   <div id ="chatrooms-container">
 
     <nav class="chatrooms-title-bar">
@@ -131,7 +131,7 @@
             <i class="fas fa-hashtag"></i>
           </span>
           <div>
-            <h3>Trending</h3>
+            <h3 onclick="enterChatroom(this)" id="trending" data-chatroom-id="PovJhPdtftwtpa0O1AZH" data-chatroom-name="trending">Trending</h3>
             <p>Discussions about the latest, new and trending topics e.g #EndSars</p>
           </div>
         </div>
@@ -140,9 +140,9 @@
           <span style="font-size:35px; color:#110E4C;">
             <i class="fas fa-praying-hands"></i>
           </span>
-          <div>
-            <h3>Faith</h3>
-            <p>Discussions on issues pertaining to our faith e.g christianity, islam etc.</p>
+          <div >
+            <h3 onclick="enterChatroom(this)" id="faith" data-chatroom-id="yYLkVcIDak4L8XhTFVDK" data-chatroom-name="faith">Faith</h3>
+            <p>Discussions on issues about religion e.g christianity, islam, etc.</p>
           </div>
         </div>
 
@@ -151,7 +151,7 @@
             <i class="fas fa-futbol"></i>
           </span>
           <div>
-            <h3>Sports</h3>
+            <h3 onclick="enterChatroom(this)" id="sport" data-chatroom-id="yFDHFqsqwIziCFRezUeo" data-chatroom-name="sport">Sports</h3>
             <p>Discussions on sports issues e.g football, basketball, olympics etc.</p>
           </div>
         </div>
@@ -161,7 +161,7 @@
             <i class="fas fa-icons"></i>
           </span>
           <div>
-            <h3>Entertainment</h3>
+            <h3 onclick="enterChatroom(this)" id="entertainment" data-chatroom-id="SpJ6Atq5QfCt3mWE5Hl9" data-chatroom-name="entertainment">Entertainment</h3>
             <p>Discussions on entertainment issues e.g movies, music etc.</p>
           </div>
         </div>
@@ -171,7 +171,7 @@
             <i class="fas fa-tshirt"></i>
           </span>
           <div>
-            <h3>Fashion</h3>
+            <h3 onclick="enterChatroom(this)" id="fashion" data-chatroom-id="jImutgDHM89GSYjARdqL" data-chatroom-name="fashion">Fashion</h3>
             <p>Discussions on the latest fashion trends e.g alte fashion</p>
           </div>
         </div>
@@ -181,7 +181,7 @@
             <i class="fas fa-user-graduate"></i>
           </span>
           <div>
-            <h3>Education</h3>
+            <h3 onclick="enterChatroom(this)" id="education" data-chatroom-id="qkuFsoxD9dj3SkT80NdA" data-chatroom-name="education">Education</h3>
             <p>Discussions on the latest school gist and scholarship opportunities</p>
           </div>
         </div>
@@ -191,7 +191,7 @@
             <i class="fas fa-laptop-code"></i>
           </span>
           <div>
-            <h3>Technology</h3>
+            <h3 onclick="enterChatroom(this)" id="technology" data-chatroom-id="mpc6smvQDLRpFkA2PSoH" data-chatroom-name="technology">Technology</h3>
             <p>Discussions on the latest technologies</p>
           </div>
         </div>
@@ -201,7 +201,7 @@
             <i class="fas fa-hand-holding-heart"></i>
           </span>
           <div>
-            <h3>Advice</h3>
+            <h3 onclick="enterChatroom(this)" id="advice" data-chatroom-id="UxtMVlgP6nqJMVXXNXlC" data-chatroom-name="advice">Advice</h3>
             <p>Discussions on matters of the heart and heart-to-heart conversations</p>
           </div>
         </div>
@@ -215,7 +215,7 @@
             <i class="fas fa-hashtag"></i>
           </span>
           <div>
-            <h3>Trending</h3>
+            <h3 onclick="enterChatroom(this)" id="trending" data-chatroom-id="PovJhPdtftwtpa0O1AZH" data-chatroom-name="trending">Trending</h3>
             <p>Discussions about the latest, new and trending topics e.g #EndSars</p>
           </div>
         </div>
@@ -225,7 +225,7 @@
             <i class="fas fa-tshirt"></i>
           </span>
           <div>
-            <h3>Fashion</h3>
+            <h3 onclick="enterChatroom(this)" id="fashion" data-chatroom-id="jImutgDHM89GSYjARdqL" data-chatroom-name="fashion">Fashion</h3>
             <p>Discussions on the latest fashion trends e.g alte fashion</p>
           </div>
         </div>
@@ -235,7 +235,7 @@
             <i class="fas fa-hand-holding-heart"></i>
           </span>
           <div>
-            <h3>Advice</h3>
+            <h3 onclick="enterChatroom(this)" id="advice" data-chatroom-id="UxtMVlgP6nqJMVXXNXlC" data-chatroom-name="advice">Advice</h3>
             <p>Discussions on matters of the heart and heart-to-heart conversations</p>
           </div>
         </div>
@@ -245,7 +245,6 @@
   </div>
 
 </div>
-
 
 <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>

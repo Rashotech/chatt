@@ -47,6 +47,7 @@ nav {
     text-align: left;
 }
 span {
+    max-width: 500px;
     background-color: white;
     display: inline-block;
     padding: 10px;
@@ -68,6 +69,25 @@ i{
 .my span {
     background-color: #363636;
     color: #ffffff;
+}
+
+#chat-header {
+    display: inline-block;
+}
+#topflex {
+    display: flex;
+}
+#leaveRoomidd {
+    display: inline-block;
+    /* float: right; */
+    padding: 10px;
+    outline: none;
+    margin-left: auto;
+    color: #110E4C;
+    text-align: right;
+    background: #FAEE1C;
+    font-weight: bold;
+    font-size: medium;
 }
 
 @media all and (max-width: 450px) {
