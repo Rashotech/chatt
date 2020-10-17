@@ -55,7 +55,7 @@ var unsubscribe = msgRef.where("chat_room_id", "==", chatId).onSnapshot(snapshot
 
         } else {
         shown = snapshot.docChanges()[0].doc.data()
-        console.log(shown)
+        // console.log(shown)
         const {sender, text} = shown;
         if (shown) {
             if (!shown.createdAt && snapshot.metadata.hasPendingWrites) {
