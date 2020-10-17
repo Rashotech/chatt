@@ -90,7 +90,7 @@ var unsubscribe = msgRef.where("chat_room_id", "==", chatId).onSnapshot(snapshot
         leaveRoom.addEventListener("click", function() {
             unsubscribe();
             localStorage.removeItem("chatId");
-            window.location.assign("http://127.0.0.1:5501/dashboard/chatroom.html")
+            window.location.assign("https://newchatt.netlify.app/dashboard/chatroom.html")
         })
     });
 
